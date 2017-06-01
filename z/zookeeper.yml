@@ -1,0 +1,14 @@
+zookeeper:
+  image: zookeeper:3.4.10
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.before: docker
+    io.rancher.os.after: network
+  restart: always
+  net: host
+  ports:
+    - ${ZOO_HOST}:2181:2181
+    - ${ZOO_HOST}:2888:2888
+    - ${ZOO_HOST}:3888:3888
+  environment:
+    - ZOO_*

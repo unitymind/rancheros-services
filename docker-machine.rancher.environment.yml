@@ -17,3 +17,6 @@ rancher:
     ETCD_NAME: rancher-01
     ETCD_PEER_AUTO_TLS: false
     ETCD_AUTO_TLS: false
+    ZOO_HOST: 192.168.99.100
+    ZOO_MY_ID: 1
+    ZOO_SERVERS: "server.1=192.168.99.100:2888:3888 server.2=192.168.99.101:2888:3888 server.3=192.168.99.102:2888:3888"
