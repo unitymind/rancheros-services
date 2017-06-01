@@ -12,7 +12,7 @@ mesos-slave:
     - /var/run/docker.sock:/var/run/docker.sock
     - /usr/bin/docker:/usr/local/bin/docker
     - /sys:/sys
-    - /cgroup:/cgroup
+    - /sys/fs/cgroup:/cgroup
     - ${MESOS_LOG_DIR}:${MESOS_LOG_DIR}
     - ${MESOS_WORK_DIR}:${MESOS_WORK_DIR}
   environment:
