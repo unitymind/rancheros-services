@@ -1,4 +1,4 @@
-calico:
+calico-slave:
   image: quay.io/calico/node:v1.2.1
   privileged: true
   volumes_from:
@@ -10,7 +10,7 @@ calico:
     - /var/run/docker.sock:/var/run/docker.sock
   labels:
     io.rancher.os.scope: system
-    io.rancher.os.after: etcd
+    io.rancher.os.befor: docker
   restart: always
   net: host
   environment:

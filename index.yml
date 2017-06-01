@@ -1,5 +1,6 @@
 services:
-- calico
+- calico-master
+- calico-slave
 - etcd
 - mesos-master
 - mesos-slave

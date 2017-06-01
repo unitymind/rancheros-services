@@ -1,0 +1,22 @@
+calico-master:
+  image: quay.io/calico/node:v1.2.1
+  privileged: true
+  volumes_from:
+    - system-volumes
+  volumes:
+    - /var/log/calico:/var/log/calico
+    - /var/run/calico:/var/run/calico
+    - /run/docker/plugins:/run/docker/plugins
+    - /var/run/docker.sock:/var/run/docker.sock
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.after: etcd
+  restart: always
+  net: host
+  environment:
+    - CALICO_*
+    - ETCD_ENDPOINTS
+    - IP_AUTODETECTION_METHOD
+    - IP6_AUTODETECTION_METHOD
+    - NO_DEFAULT_POOLS
+    - NODENAME
