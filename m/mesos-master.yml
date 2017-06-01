@@ -1,0 +1,13 @@
+mesos-master:
+  image: mesosphere/mesos-master:1.2.0
+  privileged: true
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.after: zookeeper
+  volumes_from:
+    - system-volumes
+  volumes:
+    - ${MESOS_LOG_DIR}
+    - ${MESOS_WORK_DIR}
+  environment:
+    - MESOS_*

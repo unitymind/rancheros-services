@@ -1,4 +1,5 @@
 services:
 - calico
 - etcd
+- mesos-master
 - zookeeper
