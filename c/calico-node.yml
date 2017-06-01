@@ -3,14 +3,14 @@ calico-node:
   privileged: true
   volumes_from:
     - system-volumes
-    - calico-node-data
+    - calico-data
   volumes:
     - /lib/modules:/lib/modules
     - /run/docker/plugins:/run/docker/plugins
     - /var/run/docker.sock:/var/run/docker.sock
   labels:
     io.rancher.os.scope: system
-    io.rancher.os.after: etcd, calico-node-data
+    io.rancher.os.after: etcd, calico-data
   restart: always
   net: host
   environment:

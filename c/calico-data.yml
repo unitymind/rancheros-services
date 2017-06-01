@@ -1,4 +1,4 @@
-calico-node-data:
+calico-data:
   image: busybox
   volumes:
     - /var/log/calico

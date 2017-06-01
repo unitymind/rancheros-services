@@ -1,5 +1,5 @@
 services:
 - calico-node
-- calico-node-data
+- calico-data
 - etcd
 - etcd-data
