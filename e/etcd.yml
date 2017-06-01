@@ -1,5 +1,5 @@
 etcd:
-  image: quay.io/coreos/etcd:${ETCD_VERSION_TAG}
+  image: quay.io/coreos/etcd:v3.1.8
   labels:
     io.rancher.os.scope: system
     io.rancher.os.after: network, etcd-data

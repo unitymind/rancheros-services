@@ -1,5 +1,5 @@
 calico-node:
-  image: quay.io/calico/node:${CALICO_NODE_VERSION_TAG}
+  image: quay.io/calico/node:v1.2.1
   privileged: true
   volumes_from:
     - system-volumes
