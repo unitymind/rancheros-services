@@ -1,5 +1,6 @@
 zookeeper:
   image: zookeeper:3.4.10
+  privileged: true
   volumes_from:
     - system-volumes
   labels:
