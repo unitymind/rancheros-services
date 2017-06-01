@@ -1,0 +1,18 @@
+etcd:
+  image: quay.io/coreos/etcd:${ETCD_VERSION_TAG}
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.after: network, etcd-data
+    io.rancher.os.before: docker
+  restart: always
+  net: host
+  environment:
+    - ETCD_*
+etcd-data:
+  image:
+  volumes:
+    - /opt/etcd/data
+  labels:
+    io.rancher.os.createonly: true
+    io.rancher.os.scope: system
+  net: none
