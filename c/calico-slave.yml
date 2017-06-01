@@ -10,7 +10,8 @@ calico-slave:
     - /var/run/docker.sock:/var/run/docker.sock
   labels:
     io.rancher.os.scope: system
-    io.rancher.os.befor: docker
+    io.rancher.os.before: docker
+    io.rancher.os.after: etcd-proxy
   restart: always
   net: host
   environment:
