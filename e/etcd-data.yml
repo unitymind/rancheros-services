@@ -6,5 +6,4 @@ etcd-data:
     io.rancher.os.scope: system
     io.rancher.os.before: etcd
     io.rancher.os.createonly: true
-    com.docker.compose.oneoff: true
   net: none
