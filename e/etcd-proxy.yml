@@ -1,0 +1,13 @@
+etcd:
+  image: quay.io/coreos/etcd:v3.1.8
+  command: --proxy
+  volumes:
+    - ${ETCD_DATA_DIR}:${ETCD_DATA_DIR}
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.before: docker
+    io.rancher.os.after: network
+  restart: always
+  net: host
+  environment:
+    - ETCD_*

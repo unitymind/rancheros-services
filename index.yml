@@ -2,6 +2,7 @@ services:
 - calico-master
 - calico-slave
 - etcd
+- etcd-proxy
 - mesos-master
 - mesos-slave
 - zookeeper
