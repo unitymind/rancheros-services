@@ -10,12 +10,3 @@ etcd:
   net: host
   environment:
     - ETCD_*
-etcd-data:
-  image: busybox
-  volumes:
-    - /opt/etcd/data
-  labels:
-    io.rancher.os.scope: system
-    io.rancher.os.before: etcd
-    io.rancher.os.createonly: true
-  net: none
