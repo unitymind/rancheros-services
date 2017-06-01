@@ -1,5 +1,7 @@
 zookeeper:
   image: zookeeper:3.4.10
+  volumes_from:
+    - system-volumes
   labels:
     io.rancher.os.scope: system
     io.rancher.os.before: docker
