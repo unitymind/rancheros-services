@@ -10,6 +10,6 @@ mesos-master:
     - system-volumes
   volumes:
     - ${MESOS_LOG_DIR}:${MESOS_LOG_DIR}
-    - ${MESOS_WORK_DIR}:${MESOS_LOG_DIR}
+    - ${MESOS_WORK_DIR}:${MESOS_WORK_DIR}
   environment:
     - MESOS_*
