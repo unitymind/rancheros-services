@@ -1,0 +1,10 @@
+calico-node-data:
+  image: busybox
+  volumes:
+    - /var/log/calico
+    - /var/run/calico
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.before: calico-node
+    io.rancher.os.createonly: true
+  net: none
