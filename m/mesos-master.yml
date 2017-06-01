@@ -4,6 +4,8 @@ mesos-master:
   labels:
     io.rancher.os.scope: system
     io.rancher.os.after: zookeeper
+  restart: always
+  net: host
   volumes_from:
     - system-volumes
   volumes:
