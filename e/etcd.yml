@@ -1,18 +1,20 @@
 etcd:
   image: quay.io/coreos/etcd:v3.1.8
+  volumes_from: etcd-data
   labels:
     io.rancher.os.scope: system
-    io.rancher.os.after: network, etcd-data
     io.rancher.os.before: docker
+    io.rancher.os.after: network, etcd-data
   restart: always
   net: host
   environment:
     - ETCD_*
 etcd-data:
-  image:
+  image: busybox
   volumes:
     - /opt/etcd/data
   labels:
-    io.rancher.os.createonly: true
     io.rancher.os.scope: system
+    io.rancher.os.before: etcd
+    io.rancher.os.createonly: true
   net: none
