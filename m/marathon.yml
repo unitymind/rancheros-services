@@ -1,0 +1,12 @@
+marathon:
+  image: mesosphere/marathon:v1.4.3
+  privileged: true
+  labels:
+    io.rancher.os.scope: system
+    io.rancher.os.after: mesos-master, zookeeper
+  restart: always
+  net: host
+  volumes_from:
+    - all-volumes
+  environment:
+    - MARATHON_*

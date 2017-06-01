@@ -3,6 +3,7 @@ services:
 - calico-slave
 - etcd
 - etcd-proxy
+- marathon
 - mesos-master
 - mesos-slave
 - zookeeper
